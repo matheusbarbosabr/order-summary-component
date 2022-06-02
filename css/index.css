@@ -1,0 +1,130 @@
+:root {
+    /* Colors */
+    --clr-pale-blue: hsl(225, 100%, 94%);
+    --clr-bright-blue: hsl(245, 75%, 52%);
+    --clr-very-pale-blue: hsl(225, 100%, 98%);
+    --clr-desaturated-blue: hsl(224, 23%, 55%);
+    --clr-dark-blue: hsl(223, 47%, 23%);
+
+    /* Font */
+    --paragraph-fs: 1rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    font-family: "Red Hat Display", sans-serif;
+    display: grid;
+    place-items: center;
+    background-color: var(--clr-pale-blue);
+}
+
+.card {
+    max-width: 350px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 20px;
+}
+
+.card__hero-img {
+    max-width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+
+.card__content {
+    padding: 0 1.25em 0 1.25em;
+}
+
+.card__content-description {
+    text-align: center;
+}
+
+.description__title {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--clr-dark-blue);
+    padding: 0.875em 0 0.875em 0;
+}
+
+.description__text {
+    display: block;
+    width: 95%;
+    margin: 0 auto;
+    font-size: var(--paragraph-fs);
+    line-height: 1.6;
+    color: var(--clr-desaturated-blue);
+    font-weight: 500;
+    padding-bottom: 1.5em;
+}
+
+.card__content-plan {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    border-radius: 0.75em;
+    background-color: var(--clr-very-pale-blue);
+}
+
+.plan__value {
+    display: flex;
+    align-items: center;
+    gap: 1.25em;
+}
+
+.plan__value-description p:nth-child(1) {
+    color: var(--clr-dark-blue);
+    font-weight: 900;
+}
+
+.plan__value-description p:nth-child(2) {
+    color: var(--clr-desaturated-blue);
+}
+
+.plan__change {
+    font-weight: 700;
+}
+
+.plan__change:hover {
+    color: var(--clr-dark-blue);
+    text-decoration: none;
+}
+
+.card__payment {
+    padding: 0 1.25em 1.75em 1.25em;
+    text-align: center;
+}
+
+.card__payment-button {
+    display: block;
+    width: 100%;
+    margin-top: 1.5em;
+    margin-bottom: 1.25em;
+    background-color: var(--clr-bright-blue);
+    font-size: 1em;
+    font-weight: 700;
+    color: var(--clr-very-pale-blue);
+    padding: 1em 0 1em 0;
+    border: none;
+    border-radius: 0.75em;
+    cursor: pointer;
+}
+
+.card__payment-button:hover {
+    background-color: var(--clr-dark-blue);
+}
+
+.card__payment-cancel {
+    text-decoration: none;
+    color: var(--clr-desaturated-blue);
+    font-weight: 700;
+}
+
+.card__payment-cancel:hover {
+    color: var(--clr-dark-blue);
+}
