@@ -23,6 +23,9 @@ body {
     display: grid;
     place-items: center;
     background-color: var(--clr-pale-blue);
+    background-image: url("../images/pattern-background-mobile.svg");
+    background-repeat: repeat-x;
+    background-size: contain;
 }
 
 .card {
@@ -127,4 +130,30 @@ body {
 
 .card__payment-cancel:hover {
     color: var(--clr-dark-blue);
+}
+
+@media (min-width: 700px) {
+    body {
+        background-image: url("../images/pattern-background-desktop.svg");
+    }
+
+    .card {
+        max-width: 450px !important;
+    }
+
+    .card__content {
+        padding: 0 3em;
+    }
+
+    .description__title {
+        font-size: 1.8rem;
+    }
+
+    .card__content-plan {
+        padding: 1.5em;
+    }
+
+    .card__payment {
+        padding: 0.5em 3em 3em 3em;
+    }
 }
